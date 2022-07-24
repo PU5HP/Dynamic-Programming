@@ -41,7 +41,8 @@ public class Main {
             int ans=0;
             int maxstep=moves[i];
             for(int step=1;step<=maxstep;step++){
-                ans+=mem1[i+step];
+                if(i+step<=n)
+                {ans+=mem1[i+step];}
             }
             mem1[i]=ans;
         }
