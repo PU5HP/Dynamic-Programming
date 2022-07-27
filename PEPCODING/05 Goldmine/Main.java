@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Main {
-    
+
     public static int goldmine(int[][] mem,int [][] inpmat) {
         //filling the last bloack of the mem matrix with last value
         int c=inpmat[0].length;
@@ -25,12 +25,13 @@ public class Main {
         for(int i=0;i<r;i++)
         {
             if(maxgold<mem[i][0]){
+
                 maxgold=mem[i][0];
             }
         }
         return maxgold;
     }
-    
+
 
 
     public static void main(String[] args) {
@@ -59,7 +60,7 @@ public class Main {
         //creating extra memory for the tabulation
         int [][] mem = new int [r][c];
         System.out.println(goldmine(mem,inpmat));
-        
+
         System.out.println("memory matrix:");
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
